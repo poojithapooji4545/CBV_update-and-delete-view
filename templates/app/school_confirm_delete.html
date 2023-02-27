@@ -1,0 +1,13 @@
+{% extends 'app/dummy.html' %}
+{% block title %}
+<h1>delete page</h1>
+{% endblock %}
+
+{% block body_block %}
+<h2>Are u sure to delete {{i}}</h2>
+<form method="POST">
+    {% csrf_token %}
+    <input type="submit" value="yes-delete">
+</form>
+<a href="{% url 'SchoolList' %}">No-go back</a>
+{% endblock %}
